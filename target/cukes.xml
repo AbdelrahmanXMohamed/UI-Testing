@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="12" time="292.135">
+<testcase classname="F01_Register | users could register with new accounts" name="guest user could register with valid data successfully" time="69.695">
+<system-out><![CDATA[Given user go to register page..............................................passed
+When user select gender type................................................passed
+And user enter first and last name..........................................passed
+And user enter date of birth................................................passed
+And user enter email and password and confirm password......................passed
+And user press on register button...........................................passed
+Then user register to the system successfully...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="F02_Login | users could use login functionality to open their accounts" name="user could login with valid email and password" time="18.313">
+<system-out><![CDATA[Given user go to login page.................................................passed
+When user login with valid "AbdelrahmanMohamed@gmail.com" and "p@$$word"....passed
+Then user login to the system successfully..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F03_currencies | user could switch between different currencies" name="user could move between currencies" time="16.706">
+<system-out><![CDATA[When user select random currency............................................passed
+And currency is changed in Home Page correctly..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_Search | users will be able to search for products with different parameters" name="user could search using product name" time="11.989">
+<system-out><![CDATA[Given user clicks on search field...........................................passed
+When user search with name of product.......................................passed
+Then user could find relative results.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_Search | users will be able to search for products with different parameters" name="user could search using sku" time="19.393">
+<system-out><![CDATA[Given user clicks on search field...........................................passed
+When user search with sku of product "AP_MBP_13"............................passed
+Then user will find only one results and user will click on it..............passed
+Then verify sku "AP_MBP_13".................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F05_hoverCategories | user could hover categories and select sub category" name="user could hover categories" time="13.966">
+<system-out><![CDATA[Given user hover category and select subcategory and go to desktop..........passed
+Then check page title with selected.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F06_homeSliders | users will be able to open sliders in home page" name="first slider is clickable on home page" time="29.273">
+<failure message="Expected condition failed: waiting for url to contain &quot;https://demo.nopcommerce.com/nokia-lumia-1020&quot;. Current url: &quot;https://demo.nopcommerce.com/&quot; (tried for 10 second(s) with 500 milliseconds interval)&#10;Build info: version: '4.2.0', revision: '86eb611648'&#10;System info: host: 'DESKTOP-3J6TIAH', ip: '172.31.64.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.63, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\Xbenx\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64880}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64880/devtoo..., se:cdpVersion: 102.0.5005.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: fbaa819ad96e9d15bd4b98e4f9698ee9" type="org.openqa.selenium.TimeoutException"><![CDATA[Given user go to "1" slider.................................................passed
+Then relative product for slider is displayed...............................failed
+
+StackTrace:
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to contain "https://demo.nopcommerce.com/nokia-lumia-1020". Current url: "https://demo.nopcommerce.com/" (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.2.0', revision: '86eb611648'
+System info: host: 'DESKTOP-3J6TIAH', ip: '172.31.64.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.63, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\Xbenx\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64880}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64880/devtoo..., se:cdpVersion: 102.0.5005.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fbaa819ad96e9d15bd4b98e4f9698ee9
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at stepDefinitions.D06_homeSlidersStepDef.check_current_link(D06_homeSlidersStepDef.java:21)
+	at ✽.relative product for slider is displayed(file:///F:/Sprints/Project/UIAutomationProjectRubric/src/main/resources/features/F06_homeSliders.feature:5)
+]]></failure>
+</testcase>
+<testcase classname="F06_homeSliders | users will be able to open sliders in home page" name="second slider is clickable on home page" time="33.987">
+<failure message="Expected condition failed: waiting for url to contain &quot;https://demo.nopcommerce.com/nokia-lumia-1020&quot;. Current url: &quot;https://demo.nopcommerce.com/&quot; (tried for 10 second(s) with 500 milliseconds interval)&#10;Build info: version: '4.2.0', revision: '86eb611648'&#10;System info: host: 'DESKTOP-3J6TIAH', ip: '172.31.64.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.63, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\Xbenx\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64912}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64912/devtoo..., se:cdpVersion: 102.0.5005.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 9dfe82b6eb849e065bf51c27a651fc39" type="org.openqa.selenium.TimeoutException"><![CDATA[Given user go to "2" slider.................................................passed
+Then relative product for slider is displayed...............................failed
+
+StackTrace:
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to contain "https://demo.nopcommerce.com/nokia-lumia-1020". Current url: "https://demo.nopcommerce.com/" (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.2.0', revision: '86eb611648'
+System info: host: 'DESKTOP-3J6TIAH', ip: '172.31.64.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.63, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\Xbenx\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64912}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64912/devtoo..., se:cdpVersion: 102.0.5005.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9dfe82b6eb849e065bf51c27a651fc39
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at stepDefinitions.D06_homeSlidersStepDef.check_current_link(D06_homeSlidersStepDef.java:21)
+	at ✽.relative product for slider is displayed(file:///F:/Sprints/Project/UIAutomationProjectRubric/src/main/resources/features/F06_homeSliders.feature:9)
+]]></failure>
+</testcase>
+<testcase classname="F07_followUs | users could open followUs links" name="user opens facebook link" time="24.082">
+<system-out><![CDATA[When click on "facebook" icon...............................................passed
+Then "facebook" is opened in new tab........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F07_followUs | users could open followUs links" name="user opens twitter link" time="15.573">
+<system-out><![CDATA[When click on "twitter" icon................................................passed
+Then "twitter" is opened in new tab.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F07_followUs | users could open followUs links" name="user opens rss link" time="13.428">
+<failure message="Index: 1, Size: 1" type="java.lang.IndexOutOfBoundsException"><![CDATA[When click on "rss" icon....................................................passed
+Then "rss" is opened in new tab.............................................failed
+
+StackTrace:
+java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
+	at java.util.ArrayList.get(ArrayList.java:433)
+	at stepDefinitions.D07_followUsStepDef.switch_to_second_tab(D07_followUsStepDef.java:35)
+	at ✽."rss" is opened in new tab(file:///F:/Sprints/Project/UIAutomationProjectRubric/src/main/resources/features/F07_followUs.feature:13)
+]]></failure>
+</testcase>
+<testcase classname="F07_followUs | users could open followUs links" name="user opens youtube link" time="24.615">
+<system-out><![CDATA[When click on "youtube" icon................................................passed
+Then "youtube" is opened in new tab.........................................passed
+]]></system-out>
+</testcase>
+</testsuite>
